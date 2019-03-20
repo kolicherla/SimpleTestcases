@@ -80,7 +80,7 @@ public void shopBagEmpty() {
 }
 
 public String ShopBagemptyMsg() {
-	return this.bagEmptyMsg.getText(); 
+	return this.bagEmptyMsg.getText();
 }
 public String viewcartProdname() {
 	return this.viewTocartProductName.getText(); 

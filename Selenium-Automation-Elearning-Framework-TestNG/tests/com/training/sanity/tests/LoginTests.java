@@ -19,6 +19,7 @@ public class LoginTests {
 
 	private WebDriver driver;
 	private String baseUrl;
+	private String baseUrl1;
 	private LoginPOM loginPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
@@ -35,6 +36,7 @@ public class LoginTests {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver); 
 		baseUrl = properties.getProperty("baseURL");
+		baseUrl1 = properties.getProperty("baseURL1");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);

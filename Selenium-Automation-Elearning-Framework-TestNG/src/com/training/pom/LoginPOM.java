@@ -35,6 +35,7 @@ public class LoginPOM {
 		@FindBy(xpath="//input[@value='Login']")
 		private WebElement loginBtn; 
 		
+		
 		public void sendUserName(String userName) {
 			this.userName.clear();
 			this.userName.sendKeys(userName);

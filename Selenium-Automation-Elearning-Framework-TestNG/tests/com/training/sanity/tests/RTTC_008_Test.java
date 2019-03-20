@@ -38,6 +38,7 @@ public class RTTC_008_Test {
 		loginPOM = new LoginPOM(driver); 
 		rttc08POM= new RTTC_008POM(driver);
 		baseUrl = properties.getProperty("baseURL");
+	
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
@@ -49,10 +50,10 @@ public class RTTC_008_Test {
 	}
 	
 	@AfterTest
-	public void tearDown() throws Exception {
-		Thread.sleep(1000);
-		driver.quit();
-	}
+	//public void tearDown() throws Exception {
+		//Thread.sleep(1000);
+		//driver.quit();
+	//}
 	   
 	   @Test   
 		public void ethniclnkClikc() throws InterruptedException {
@@ -62,6 +63,7 @@ public class RTTC_008_Test {
 		   rttc08POM.clickEthniclink();
 	   Select oSelect = new Select(driver.findElement(By.xpath("//div[@class='sort']//select[@onchange='location = this.value;']")));
 	   List <WebElement> elementCount = oSelect.getOptions();
+	   System.out.println(elementCount);
 	   int iSize = elementCount.size();
 	   for(int i =0; i<iSize ; i++){
 	   String sValue = elementCount.get(i).getText();
