@@ -8,11 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.training.bean.LoginBean;
-import com.training.dao.ELearningDAO;
+
 import com.training.dataproviders.LoginDataProviders;
 import com.training.generics.GenericMethods;
 import com.training.generics.ScreenShot;
@@ -27,6 +25,7 @@ public class LoginDBTest {
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private GenericMethods genericMethods; 
+	
 	
 	
 	@BeforeClass

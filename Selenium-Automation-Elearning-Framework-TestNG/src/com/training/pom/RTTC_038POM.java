@@ -1,9 +1,11 @@
 package com.training.pom;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class RTTC_038POM {
 private WebDriver driver; 
@@ -75,6 +77,43 @@ private WebDriver driver;
 			@FindBy(xpath="//i[@class='fa fa-trash-o']")
 			private WebElement DeleteCatagortbtn;
 			
+			///Product link page xpath
+			@FindBy(xpath="//a[contains(text(),'Products')]")
+			private WebElement productlnk; 
+			
+			@FindBy(xpath="//input[@name='filter_name']")
+			private WebElement enter_productname; 
+			
+			@FindBy(xpath="//input[@id='input-price']")
+			private WebElement enter_price; 
+			
+			@FindBy(xpath="//button[@id='button-filter']")
+			private WebElement filter_btn; 
+			
+			@FindBy(xpath="//table[@class='table table-bordered table-hover']/tbody/tr/td[3]")
+			private WebElement veirfy_prod_name; 
+			
+			
+			@FindBy(xpath="//select[@name='filter_status']")
+			private WebElement Status_value; 
+			
+			@FindBy(xpath="//input[@id='input-model']")
+			private WebElement Model_value; 
+			
+			@FindBy(xpath="//input[@id='input-quantity']")
+			private WebElement Quality_value; 
+			
+			@FindBy(xpath="//select[@name='filter_image']")
+			private WebElement Image_value; 
+			
+			@FindBy(xpath="//table[@class='table table-bordered table-hover']/tbody/tr/td[4]")
+			private WebElement veirfy_model_name; 
+			
+			@FindBy(xpath="//table[@class='table table-bordered table-hover']/tbody/tr/td[5]")
+			private WebElement veirfy_price; 
+			
+			@FindBy(xpath="//table[@class='table table-bordered table-hover']/tbody/tr/td[7]")
+			private WebElement veirfy_Status; 
 			
 			public void sendUserName(String userName) {
 				this.userNameadmin.clear();
@@ -99,13 +138,38 @@ private WebDriver driver;
 		public void clickCategorieslink() {
 			this.categorieslnk.click(); 
 }
+		public void clickproductlink() {
+			this.productlnk.click(); 
+}
+		
+		
 		public void clickAddnewicon() {
 			this.addNewIcon.click(); 
 }
+		  
 		public void sendCategoryName(String categoryname) {
 			this.CategoryText.clear();
 			this.CategoryText.sendKeys(categoryname);
 }
+		public void sendproductName(String productname) {
+			this.enter_productname.clear();
+			this.enter_productname.sendKeys(productname);
+		}
+		
+		public void sendPrice(String Price) {
+			this.enter_price.clear();
+			this.enter_price.sendKeys(Price);
+		}
+		
+		public void Statusdropdown(String statusvalue) {
+			this.Status_value.sendKeys(statusvalue);
+		}
+		
+		public void sendModelnumber(String Modelnum) {
+			this.Model_value.clear();
+			this.Model_value.sendKeys(Modelnum);
+		}
+		
 		
 		public void sendDescription(String descriptiontext) {
 			this.DescriptionText.clear();
@@ -122,6 +186,10 @@ private WebDriver driver;
 		public void clickDatatab() {
 			this.Datatab.click(); 
 }
+		public void clickfilter() {
+			this.filter_btn.click(); 
+}
+		
 		public void clickdesignTab() {
 			this.Designtab.click(); 
 }
@@ -131,6 +199,10 @@ private WebDriver driver;
 		public String saveSuccessMsg() {
 			return this.SuccessMsg.getText();
 }
+		public String verifyprodname() {
+			return this.veirfy_prod_name.getText();
+}
+		
 		public void clickCategoryedit() {
 			this.CategoryEdit.click(); 
 	}
@@ -144,5 +216,31 @@ private WebDriver driver;
 		public void CatagoryDeletebtn() {
 			this.DeleteCatagortbtn.click();
 		}
+
+		public void sendQunatity(String qunatity) {
+			this.Quality_value.clear();
+			this.Quality_value.sendKeys(qunatity);
+			
+		}
+
+		public void Imagedropdown(String imagevalue) {
+			this.Image_value.sendKeys(imagevalue);
+			
+		}
+
+		public String verifymodelnum() {
+			return this.veirfy_model_name.getText();
+	
 		
+			
+		}
+
+		public String verifyPrice() {
+			return this.veirfy_price.getText();
+		}
+
+		public String verifyStatus() {
+			return this.veirfy_Status.getText();
+		}
+		 
 }
