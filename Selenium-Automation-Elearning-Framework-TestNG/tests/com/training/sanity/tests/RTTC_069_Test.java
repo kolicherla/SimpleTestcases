@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -35,7 +37,8 @@ public class RTTC_069_Test {
 		baseUrl1 = properties.getProperty("baseURL1");
 		screenShot = new ScreenShot(driver);
 		// open the browser
-		driver.get(baseUrl1);	
+		
+
 	}
 
 	@AfterTest
